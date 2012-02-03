@@ -1,0 +1,22 @@
+<% unless @app.valid? %>
+  <h1>This app could not be served:</h1>
+  <ul>
+    <% @app.errors.full_messages.each do |error| %>
+      <li>
+        <%= error %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% unless @customization.valid? %>
+  <h1>There were errors with the following customizations:</h1>
+  <ul>
+    <% @customization.errors.full_messages.each do |error| %>
+      <li>
+        <%= error %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+

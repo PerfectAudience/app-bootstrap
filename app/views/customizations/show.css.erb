@@ -1,0 +1,25 @@
+@import 'app/assets/stylesheets/utility/mixins';
+
+/* General */
+$total-width:<%= @customization.attributes[:width].to_i/10.0 %>em;
+$total-height:<%= @customization.attributes[:height].to_i/10.0 %>em;
+
+$padding:0.5em; /* 5px / 10px */
+
+
+
+.images-widget {
+  width:$total-width;
+  height:$total-height;
+}
+
+
+$posts-height: $total-height;
+
+.images {
+  height:$posts-height;
+}
+
+.image {
+
+}

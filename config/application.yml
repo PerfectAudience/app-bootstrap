@@ -1,0 +1,19 @@
+defaults: &defaults
+  cache_expiration_ttl: 120
+
+development:
+  <<: *defaults
+  nowspots_tracking_js_url: "http://www.nowspots.dev:8080/api/tracking.js"
+
+test:
+  <<: *defaults
+  nowspots_tracking_js_url: "http://www.nowspots.dev:8080/api/tracking.js"
+
+staging:
+  <<: *defaults
+  nowspots_tracking_js_url: "http://www.nowspots-staging.com/api/tracking.js"
+
+production:
+  cache_expiration_ttl: <%= ENV['CACHE_EXPIRATION_TTL'] %>
+  nowspots_tracking_js_url: "http://www.nowspots.com/api/tracking.js"
+

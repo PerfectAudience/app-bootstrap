@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base target="_blank">
+
+    <%= stylesheet_link_tag 'nowspots-images' %>
+
+    <link href="/customization.css?<%= @customization.to_query_string %>" media="screen" rel="stylesheet" type="text/css">
+  </head>
+  <%= content_tag(:body, :data => { app: @app.attributes[:app], "destination-url" => @app.attributes[:destination_url], spot: @app.attributes[:spot], preview: @app.attributes[:preview] }) do %>
+
+    <%= yield %>
+
+    <%= javascript_include_tag "nowspots-images" %>
+    <%= javascript_include_tag APP_CONFIG["nowspots_tracking_js_url"] %>
+
+  <% end %>
+</html>

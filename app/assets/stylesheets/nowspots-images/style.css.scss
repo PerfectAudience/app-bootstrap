@@ -1,0 +1,35 @@
+@import 'utility/mixins';
+
+html {}
+html, body {
+  width:100%;
+  height:100%;
+}
+body {
+  position:relative;
+  font:62.5% Arial, Sans-Serif; // 1em = 10px
+}
+
+.group:after {
+  display:block;
+  content:"";
+  clear:both;
+  height:0;
+}
+.group { *zoom:1; } // IE 6/7
+
+
+// CONTAINER
+.images-widget {
+  position:relative;
+}
+
+// POSTS
+.images {
+  position:absolute;
+}
+
+.image {
+
+
+}

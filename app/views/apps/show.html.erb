@@ -1,0 +1,10 @@
+<%= content_tag(:div, id: 'widget', class: "images-widget") do %>
+
+  <%= content_tag(:ol, class: 'images', data: { width: @customization.attributes[:width], height: (@customization.attributes[:height]) }) do %>
+
+    <li class="image"> <img src="<%= @app.attributes[:source] %>"> 
+    </li>
+
+
+  <% end %>
+<% end %>
