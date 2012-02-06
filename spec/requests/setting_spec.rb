@@ -28,7 +28,7 @@ describe 'GET /settings.json' do
 
     json = JSON.parse(page.text)
     json['config_options'].each do |option|
-      ['Drop-down', 'String', 'Color', 'Boolean'].should include(option['field_type'])
+      ['Drop-down', 'String', 'Color', 'Boolean', 'Image'].should include(option['field_type'])
     end
   end
 
