@@ -1,6 +1,4 @@
-#= require jquery.mousewheel
-#= require jquery.jscrollpane
-#= require date.format
+#= require jquery
 
 track_click = (event, json, link_opened) ->
   NowspotsTracker.track_click(event, json, link_opened)
